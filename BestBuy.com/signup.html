@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Account</title>
+    <link rel="stylesheet" href="styles/signup.css">
+  </head>
+  <body>
+    <div id="navbar">
+      <div><img src="https://s2.q4cdn.com/785564492/files/design/logo/logo-inverse.png" alt=""></div>
+      <div><a href="index.html">Return to previous page</a></div>
+      
+    </div>
+    <div id="signup">
+    <form>
+      <h1>Create an Account</h1>
+      <input type="text" id="firstname" placeholder="First Name">
+      <input type="text" id="lastname" placeholder="Last Name">
+      <input id="email" type="text" placeholder="Enter email" />
+      <input id="pass" type="password" placeholder="Enter password" />
+      <input id="user" type="text" placeholder="Enter username" />
+      <!-- <input type="checkbox" name="" id="i"><span>Use for Account Recovery</span> -->
+      <input type="submit" id="submit" value="Create an Account"/>
+      <!-- <hr style="width:80px ;"> -->
+      <hr style="width: 180px; margin-top: 20px;">
+      <input type="submit" id="Googlebtn" value="Sign Up with Google"/>
+      <p>By continuing you agree to our Terms and Conditions, our Privacy <br> Policy, and the My Best Buy® Program Terms.</p>
+      <hr>
+      <div id="already">
+       <div> <h3>Already have an account?</h3></div>
+        <div><a id="a1" href="login.html">Sign in</a> </div>
+
+      </div>
+      
+    </form>
+  </div>
+  <div id="footer">
+    <p>Prices and offers are subject to change. © 2022 Best Buy. All rights reserved. BEST BUY, the BEST BUY logo, the Tag Design, MY BEST BUY, and BESTBUY.COM are trademarks of Best Buy and its affiliated companies.</p>
+  </div>
+  </body>
+</html>
+
+<script>
+  document.querySelector("form").addEventListener("submit", signUpFun);
+
+  var userData = JSON.parse(localStorage.getItem("userCreds"))||[]
+  function signUpFun() {
+    event.preventDefault();
+
+    var userObj = {
+      firstname:document.querySelector("#firstname").value,
+      lastname:document.querySelector("#lastname").value,
+
+      email: document.querySelector("#email").value,
+      password: document.querySelector("#pass").value,
+      userName: document.querySelector("#user").value,
+    };
+    //console.log(userObj);
+    userData.push(userObj);
+    //console.log(userData)
+    localStorage.setItem("userCreds",JSON.stringify(userData))
+    window.location.href = "login.html";
+  }
+</script>

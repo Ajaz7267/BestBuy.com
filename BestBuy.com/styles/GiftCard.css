@@ -1,0 +1,56 @@
+#GHead{
+    width: 70%;
+    /* border: 1px solid black; */
+    margin: auto;
+    margin-top: 20px;
+}
+#head{
+    color: black;
+    margin-top:20px ;
+    font-size: 26px;
+}
+#a2{
+    color: #0046be;
+}
+#banner1{
+    margin-top: 80px;
+}
+#banner{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 240px;
+    margin: 20px;
+background-image: url(https://pisces.bbystatic.com/image2/BestBuy_US/dam/GL-65642-pm-bkgd-lv-c50f1cfa-9692-4569-b013-611b9688b76d.jpg);
+background-size: 1500px 300px;
+}
+h1{
+    font-size: 48px;
+    margin-top: 50px;
+    color: #fff200;
+}
+h2{
+ color: white;
+ line-height: 4px;
+ margin-top: -20px;
+ font-size: 19px;
+}
+#bn{
+    margin-right: 250px;
+    width: 160px;
+    /* height: 00px; */
+}
+#check{
+    margin-right: 20px;
+    border-radius: 7px;
+    border: none;
+    background-color: white;
+    padding: 6px;
+    width: 160px;
+}
+#a4{
+    margin-top: 10px;
+    color: #fff200;
+    font-size: 12px;
+    /* word-spacing: 2px; */
+}
